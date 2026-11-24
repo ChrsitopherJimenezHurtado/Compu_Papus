@@ -2,6 +2,18 @@
 <resources>
     //Color de fondo app
     <color name="fondo">#080C16</color>
-    //colores encabezado
+
+    // Colores de texto
+    <color name="titulos">#22D3EE</color>
+    <color name="textos">#EAF0FB</color> // Se aplica a textos de botones y textos en general
+
+    // Color Botones
+    <color name="boton_relleno">#1D428A</color>
+
+    // Colores tarjetas
+    <color name="relleno">#0F1729</color>
+    <color name="trazo_tarjeta">#2A3A63</color>
+
+    //colores iconos
     <color name="iconos">#EAF0FB</color>
 </resources>

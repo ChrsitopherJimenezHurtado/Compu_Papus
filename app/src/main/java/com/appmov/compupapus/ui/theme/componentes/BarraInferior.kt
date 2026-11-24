@@ -3,11 +3,13 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.absoluteOffset
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBox
+import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.FilterVintage
 import androidx.compose.material.icons.filled.Home
@@ -19,8 +21,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.appmov.compupapus.CompuPapusScreen
+import com.appmov.compupapus.MainActivity
 import com.appmov.compupapus.R
+import com.appmov.compupapus.ui.theme.CompuPapusTheme
 
 
 @Composable
@@ -31,7 +37,7 @@ fun BarraInferior(){
             .background(
                 colorResource(R.color.fondo)
             )
-            .padding(8.dp),
+            .padding(10.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {
@@ -43,24 +49,28 @@ fun BarraInferior(){
             Icon(
                 imageVector = Icons.Default.Home,
                 contentDescription = "Inicio",
-                tint = colorResource(R.color.iconos)
+                tint = colorResource(R.color.iconos),
+                modifier = Modifier
+                    .size(35.dp)
             )
         }
 
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(15.dp))
         // boton reparaciones
         IconButton(
             // programar accion
             onClick = { }
         ) {
             Icon(
-                imageVector = Icons.Default.FilterVintage,
+                imageVector = Icons.Default.Build,
                 contentDescription = "Reparaciones",
-                tint = colorResource(R.color.iconos)
+                tint = colorResource(R.color.iconos),
+                modifier = Modifier
+                    .size(35.dp)
             )
         }
 
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(15.dp))
         // boton tienda
         IconButton(
             // programar accion
@@ -69,11 +79,13 @@ fun BarraInferior(){
             Icon(
                 imageVector = Icons.Default.Storefront,
                 contentDescription = "Menú",
-                tint = colorResource(R.color.iconos)
+                tint = colorResource(R.color.iconos),
+                modifier = Modifier
+                    .size(35.dp)
             )
         }
 
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(15.dp))
         // boton citas
         IconButton(
             // programar accion
@@ -82,10 +94,12 @@ fun BarraInferior(){
             Icon(
                 imageVector = Icons.Default.CalendarMonth,
                 contentDescription = "Menú",
-                tint = colorResource(R.color.iconos)
+                tint = colorResource(R.color.iconos),
+                modifier = Modifier
+                    .size(35.dp)
             )
         }
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(15.dp))
         // boton cuenta
         IconButton(
             // programar accion
@@ -94,8 +108,16 @@ fun BarraInferior(){
             Icon(
                 imageVector = Icons.Default.AccountBox,
                 contentDescription = "Menú",
-                tint = colorResource(R.color.iconos)
+                tint = colorResource(R.color.iconos),
+                modifier = Modifier
+                    .size(35.dp)
             )
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewBarraInferior() {
+    BarraInferior()
 }

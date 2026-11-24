@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.material3.Text
@@ -25,6 +26,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.colorResource
 import com.appmov.compupapus.R
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.ui.tooling.preview.Preview
+import com.appmov.compupapus.CompuPapusScreen
+import com.appmov.compupapus.ui.theme.CompuPapusTheme
 
 @Composable
 fun BarraSuperior() {
@@ -46,19 +50,22 @@ fun BarraSuperior() {
             Icon(
                 imageVector = Icons.Default.Menu,
                 contentDescription = "Menú",
-                tint = colorResource(R.color.iconos)
+                tint = colorResource(R.color.iconos),
+                modifier = Modifier
+                    .size(30.dp)
             )
         }
         // campo de busquea
         OutlinedTextField(
             value = busqueda,
             onValueChange = { busqueda = it },
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.weight(1f)
+                .padding(start = 10.dp, end = 10.dp),
             shape = RoundedCornerShape(20.dp),
             // texto para usuarios
             placeholder = {
                 Text("Buscar producto...")
-                colorResource(R.color.iconos)
+                colorResource(R.color.textos)
             },
             // para el color del campo
             singleLine = true,
@@ -82,8 +89,16 @@ fun BarraSuperior() {
             Icon(
                 imageVector = Icons.Default.ShoppingCart,
                 contentDescription = "Carrito",
-                tint = colorResource(R.color.iconos)
+                tint = colorResource(R.color.iconos),
+                modifier = Modifier
+                    .size(30.dp)
             )
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewBarraSuperior() {
+    BarraSuperior()
 }
