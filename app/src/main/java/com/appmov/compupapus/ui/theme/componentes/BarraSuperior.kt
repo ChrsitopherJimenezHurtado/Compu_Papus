@@ -2,7 +2,6 @@ package com.appmov.compupapus.ui.theme.componentes
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -27,8 +26,7 @@ import androidx.compose.ui.res.colorResource
 import com.appmov.compupapus.R
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.ui.tooling.preview.Preview
-import com.appmov.compupapus.CompuPapusScreen
-import com.appmov.compupapus.ui.theme.CompuPapusTheme
+
 
 @Composable
 fun BarraSuperior() {

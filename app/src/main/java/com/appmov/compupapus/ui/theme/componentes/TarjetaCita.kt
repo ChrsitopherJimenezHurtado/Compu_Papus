@@ -20,7 +20,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.appmov.compupapus.R
@@ -28,11 +27,11 @@ import com.appmov.compupapus.data.Cita
 
 @Composable
 fun TarjetaCita(
-    cita: Cita
+    cita: Cita,
 ){
     Card(
         modifier = Modifier.fillMaxWidth()
-            .padding(30.dp),
+            .padding(start = 30.dp, top = 15.dp, end = 30.dp, bottom = 15.dp),
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(
             containerColor = colorResource(R.color.relleno),
@@ -157,16 +156,3 @@ fun TarjetaCita(
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun PreviewTarjetas() {
-    TarjetaCita(
-        cita = Cita(
-            equipo = "Acer Xbox 15",
-            fechaHora = "09/11/2026",
-            tipoServicio = "Mantenimiento",
-            detalle = "Sobrecalentamiento del equipo",
-            estado = "En espera"
-        )
-    )
-}
