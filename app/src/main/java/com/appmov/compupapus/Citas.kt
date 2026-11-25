@@ -53,13 +53,13 @@ fun CitasScreen() {
             detalle = "Pantalla dañada",
             estado = "En proceso"
         ),
-        /*Cita(
+        Cita(
             equipo = "Lenovo Legion",
             fechaHora = "11/11/2026",
             tipoServicio = "Limpieza",
             detalle = "Cambio de pasta térmica",
             estado = "Finalizado"
-        )*/
+        )
     )
 
     Scaffold(

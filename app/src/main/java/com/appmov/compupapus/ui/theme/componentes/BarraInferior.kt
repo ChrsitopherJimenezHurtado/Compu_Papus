@@ -72,7 +72,7 @@ fun BarraInferior(){
         ) {
             Icon(
                 imageVector = Icons.Default.Storefront,
-                contentDescription = "Menú",
+                contentDescription = "Tienda",
                 tint = colorResource(R.color.iconos),
                 modifier = Modifier
                     .size(35.dp)
@@ -87,7 +87,7 @@ fun BarraInferior(){
         ) {
             Icon(
                 imageVector = Icons.Default.CalendarMonth,
-                contentDescription = "Menú",
+                contentDescription = "Citas",
                 tint = colorResource(R.color.iconos),
                 modifier = Modifier
                     .size(35.dp)
@@ -101,7 +101,7 @@ fun BarraInferior(){
         ) {
             Icon(
                 imageVector = Icons.Default.AccountBox,
-                contentDescription = "Menú",
+                contentDescription = "Cuenta",
                 tint = colorResource(R.color.iconos),
                 modifier = Modifier
                     .size(35.dp)
