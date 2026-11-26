@@ -52,7 +52,7 @@ fun CitasScreen() {
             tipoServicio = "Reparación",
             detalle = "Pantalla dañada",
             estado = "En proceso"
-        ),
+        )
     )
 
     Scaffold(
